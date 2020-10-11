@@ -12,6 +12,7 @@ const StyledButton = styled.a`
   border: 3px solid #222222;
   text-align: center;
   font-size: 1.6rem;
+  text-decoration: none;
 
   &:hover {
     color: white;
