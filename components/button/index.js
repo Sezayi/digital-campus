@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const StyledButton = styled.a`
+const StyledButton = styled(motion.a)`
   display: inline-block;
   border-radius: 3px;
   padding: 1rem 0;
@@ -18,19 +19,20 @@ const StyledButton = styled.a`
     color: white;
     background-color: black;
     cursor: pointer;
-    transition: 0.3s;
   }
 `;
 
 const Button = (props) => {
   return (
     <StyledButton
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.8 }}
       href={props.href}
       target={props.target}
       rel={props.rel}
       primary
     >
-     {props.title}
+      {props.title}
     </StyledButton>
   );
 };
