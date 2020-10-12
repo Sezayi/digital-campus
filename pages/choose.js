@@ -9,7 +9,19 @@ const StyledContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  @media (max-width: 768px) {
+    height: 200px;
+    }
+
 `;
+
+const StyledPagetitle = styled.h1`
+   font-size: 5rem;
+   @media (max-width: 768px) {
+  font-size: 3rem;
+  }
+`
+
 
 const CharacterContainer = styled.div`
   height: auto;
@@ -40,7 +52,7 @@ function Choose() {
         }}
       >
         <Link href="/">
-          <h1>Choose your character</h1>
+          <StyledPagetitle>Choose your character</StyledPagetitle>
         </Link>
       </StyledContainer>
       <CharacterContainer>

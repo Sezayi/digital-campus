@@ -17,7 +17,11 @@ import Link from "next/link";
 
 const StyledTitle = styled.h1`
 color: #ffffff;
-margin-top: 1rem`
+margin-top: 1rem
+font-size: 5rem;
+@media (max-width: 768px) {
+  font-size: 3rem;
+}`
 
 const StyledContainer = styled.div`
   height: 75vh;
