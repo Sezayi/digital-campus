@@ -13,10 +13,10 @@ const StyledCard = styled(motion.div)`
 `;
 
 const CardHeader = styled.header`
-  margin: 0rem 1rem 0rem 1rem;
+  margin: 0rem 1rem 0rem 0rem;
   padding: 1rem 2rem 1rem 2rem;
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
 `;
 
 const ImageWrapper = styled.div`
