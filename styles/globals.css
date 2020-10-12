@@ -5,13 +5,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: Oswald, sans-serif;
-  background-color: gainsboro;
+  background-color: rgb(34,34,34);
 }
 
 h1 {
   font-size: 5em;
   font-weight: 400;
-  color:#222222;
+  color:#FFFFFF;
   text-align: center;
 }
 

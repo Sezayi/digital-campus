@@ -1,12 +1,26 @@
 import Head from "next/head";
-// import RobotOne from "../public/images/robotone.svg";
+// import explorebg from "../public/images/explorebg.svg";
 import Logo from "../components/logo";
 import Button from "../components/button";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+
+// const BackgroundContainer = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   position: absolute;
+//   z-index: -1;
+//   overflow: hidden;
+// `;
+
+const StyledTitle = styled.h1`
+color: #ffffff;
+margin-top: 1rem`
 
 const StyledContainer = styled.div`
-  height: 100vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +36,9 @@ const TitleWrapper = styled.div`
   justify-content: center;
 `;
 
+const DragContainer = styled(motion.div)`
+  margin-top: 3rem;
+`
 export default function Home() {
   return (
     <>
@@ -30,7 +47,7 @@ export default function Home() {
           <title>explorers guide to Ethereum</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <motion.div
+        <DragContainer
           drag
           dragConstraints={{
             top: -10,
@@ -40,15 +57,20 @@ export default function Home() {
           }}
         >
           <Logo />
-        </motion.div>
+        </DragContainer>
         <TitleWrapper>
-          <h1>The explorers guide to Ethereum </h1>
+          <StyledTitle>The explorers guide to Ethereum </StyledTitle>
         </TitleWrapper>
-        <StartWrapper>
-          <Button href="" target="" title="Start your journey" />
-          {/* <img height="300px" src={RobotOne} /> */}
-        </StartWrapper>
+        <Link href="/choose">
+          <StartWrapper>
+            <Button title="Start your journey" />
+            {/* <img height="300px" src={RobotOne} /> */}
+          </StartWrapper>
+        </Link>
       </StyledContainer>
+      {/* <BackgroundContainer>
+        <img src={explorebg} alt="bgimage" />
+      </BackgroundContainer> */}
     </>
   );
 }

@@ -9,15 +9,16 @@ const StyledButton = styled(motion.a)`
   width: 16rem;
   height: 5rem;
   background: transparent;
-  color: #222222;
-  border: 3px solid #222222;
+  color: #ffffff;
+  border: 3px solid #f35b04;
+  background-color: rgb(243, 91, 4);
   text-align: center;
   font-size: 1.6rem;
   text-decoration: none;
 
   &:hover {
     color: white;
-    background-color: black;
+    background-color: #f35b04;
     cursor: pointer;
   }
 `;
@@ -26,7 +27,6 @@ const Button = (props) => {
   return (
     <StyledButton
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.8 }}
       href={props.href}
       target={props.target}
       rel={props.rel}
