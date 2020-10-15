@@ -2,7 +2,10 @@ import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Card from "../components/card";
-import RobotTwo from "../components/RobotTwo";
+import RobotMonetizer from "../components/RobotMonetizer";
+import RobotSocialite from "../components/RobotSocial";
+import RobotObserver from "../components/RobotObserver";
+
 
 const StyledContainer = styled(motion.div)`
   height: 320px;
@@ -58,17 +61,17 @@ function Choose() {
       <CharacterContainer>
         <Card
           header="Monetizer"
-          image={<RobotTwo />}
+          image={<RobotMonetizer />}
           body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
         />
         <Card
           header="Socialite"
-          image={<RobotTwo />}
+          image={<RobotSocialite />}
           body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
         />
         <Card
           header="Observer"
-          image={<RobotTwo />}
+          image={<RobotObserver />}
           body="An observer is one who engages in observation or in watching an experiment."
         />
       </CharacterContainer>
