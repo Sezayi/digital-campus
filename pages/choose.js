@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Card from "../components/card";
 import RobotMonetizer from "../components/RobotMonetizer";
-import RobotSocialite from "../components/RobotSocial";
+import RobotSocialite from "../components/RobotSocialite";
 import RobotObserver from "../components/RobotObserver";
 
 
