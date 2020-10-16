@@ -1,19 +1,23 @@
 import Head from "next/head";
-// import explorebg from "../public/images/explorebg.svg";
 import Logo from "../components/logo";
 import Button from "../components/button";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+//IMAGES
+import explorebg from "../public/images/explorebg.svg";
 
-// const BackgroundContainer = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   position: absolute;
-//   z-index: -1;
-//   overflow: hidden;
-// `;
+
+
+const BackgroundContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url(${explorebg})
+`;
 
 const StyledTitle = styled.h1`
 color: #ffffff;
@@ -46,6 +50,7 @@ const DragContainer = styled(motion.div)`
 export default function Home() {
   return (
     <>
+      <BackgroundContainer>
       <StyledContainer>
         <Head>
           <title>explorers guide to Ethereum</title>
@@ -72,9 +77,8 @@ export default function Home() {
           </StartWrapper>
         </Link>
       </StyledContainer>
-      {/* <BackgroundContainer>
-        <img src={explorebg} alt="bgimage" />
-      </BackgroundContainer> */}
+    
+      </BackgroundContainer>
     </>
   );
 }

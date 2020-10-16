@@ -7,7 +7,7 @@ const StyledCard = styled(motion.div)`
   margin: 1rem;
   max-width: 400px;
   height: 480px;
-  background-color: #4e4e4e;
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: rgba(245, 245, 245, 0.07) 0px 14px 66px, rgba(245, 245, 245, 0.03) 0px 10px 17px, rgba(245, 245, 245, 0.05) 0px 4px 7px
   border-radius: 8px;
 `;
@@ -45,7 +45,7 @@ const Card = (props) => {
     <StyledCard
       whileHover={{
         position: "relative",
-        background: "grey",
+        background: "black",
         zIndex: 1,
         scale: 1.2,
         transition: {

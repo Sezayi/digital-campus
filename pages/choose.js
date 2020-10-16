@@ -6,6 +6,18 @@ import RobotMonetizer from "../components/RobotMonetizer";
 import RobotSocialite from "../components/RobotSocialite";
 import RobotObserver from "../components/RobotObserver";
 
+//IMAGES
+import explorebg from "../public/images/explorebg.svg";
+
+const BackgroundContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url(${explorebg})
+`;
+
 
 const StyledContainer = styled(motion.div)`
   height: 320px;
@@ -37,6 +49,7 @@ const CharacterContainer = styled.div`
 function Choose() {
   return (
     <>
+    <BackgroundContainer>
       <StyledContainer
         initial="hidden"
         animate="visible"
@@ -55,7 +68,7 @@ function Choose() {
         }}
       >
         <Link href="/">
-          <StyledPagetitle>Choose your character</StyledPagetitle>
+          <StyledPagetitle>Choose your explorer</StyledPagetitle>
         </Link>
       </StyledContainer>
       <CharacterContainer>
@@ -75,6 +88,7 @@ function Choose() {
           body="An observer is one who engages in observation or in watching an experiment."
         />
       </CharacterContainer>
+      </BackgroundContainer>
     </>
   );
 }

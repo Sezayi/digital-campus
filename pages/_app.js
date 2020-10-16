@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps, router }) {
           },
           pageAnimate: {
             opacity: 1,
-            
           },
         }}
       >
