@@ -17,7 +17,6 @@ import RobotObserver from "../components/RobotObserver";
 //   background-image: url(${explorebg})
 // `;
 
-
 const StyledContainer = styled(motion.div)`
   height: 320x;
   display: flex;
@@ -25,17 +24,15 @@ const StyledContainer = styled(motion.div)`
   justify-content: flex-start;
   @media (max-width: 768px) {
     height: 200px;
-    }
-
+  }
 `;
 
 const StyledPagetitle = styled.h1`
-   font-size: 5rem;
-   @media (max-width: 768px) {
-  font-size: 3rem;
+  font-size: 5rem;
+  @media (max-width: 768px) {
+    font-size: 3rem;
   }
-`
-
+`;
 
 const CharacterContainer = styled.div`
   height: auto;
@@ -45,10 +42,14 @@ const CharacterContainer = styled.div`
   justify-content: center;
 `;
 
+const StyledA = styled.a`
+text-decoration: none;
+cursor: pointer;
+`
+
 function Choose() {
   return (
     <>
-    
       <StyledContainer
         initial="hidden"
         animate="visible"
@@ -71,23 +72,34 @@ function Choose() {
         </Link>
       </StyledContainer>
       <CharacterContainer>
-        <Card
-          header="Monetizer"
-          image={<RobotMonetizer />}
-          body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
-        />
-        <Card
-          header="Socialite"
-          image={<RobotSocialite />}
-          body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
-        />
-        <Card
-          header="Observer"
-          image={<RobotObserver />}
-          body="An observer is one who engages in observation or in watching an experiment."
-        />
+        <Link href="/monetizer">
+          <StyledA >
+            <Card
+              header="Monetizer"
+              image={<RobotMonetizer />}
+              body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/monetizer">
+          <StyledA >
+            <Card
+              header="Socialite"
+              image={<RobotSocialite />}
+              body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/monetizer">
+          <StyledA >
+            <Card
+              header="Observer"
+              image={<RobotObserver />}
+              body="An observer is one who engages in observation or in watching an experiment."
+            />
+          </StyledA >
+        </Link>
       </CharacterContainer>
-      
     </>
   );
 }

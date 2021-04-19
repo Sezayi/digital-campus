@@ -33,11 +33,6 @@ const CardBody = styled.div`
 const StyledLink = styled.a`
   padding: 32px 32px 0px 32px;
   color: #f35b04;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const Card = (props) => {
