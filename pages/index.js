@@ -16,7 +16,6 @@ const BackgroundContainer = styled.div`
   z-index: -1;
   overflow: hidden;
   background-size: cover;
-  background-image: url(${explorebg})
 `;
 
 const StyledTitle = styled.h1`

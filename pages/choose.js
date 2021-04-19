@@ -7,20 +7,19 @@ import RobotSocialite from "../components/RobotSocialite";
 import RobotObserver from "../components/RobotObserver";
 
 //IMAGES
-import explorebg from "../public/images/explorebg.svg";
+// import explorebg from "../public/images/explorebg.svg";
 
-const BackgroundContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  background-size: cover;
-  background-image: url(${explorebg})
-`;
+// const BackgroundContainer = styled.div`
+//   width: 100%;
+//   height: 100vh;
+//   z-index: -1;
+//   background-size: cover;
+//   background-image: url(${explorebg})
+// `;
 
 
 const StyledContainer = styled(motion.div)`
-  height: 320px;
+  height: 320x;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -49,7 +48,7 @@ const CharacterContainer = styled.div`
 function Choose() {
   return (
     <>
-    <BackgroundContainer>
+    
       <StyledContainer
         initial="hidden"
         animate="visible"
@@ -88,7 +87,7 @@ function Choose() {
           body="An observer is one who engages in observation or in watching an experiment."
         />
       </CharacterContainer>
-      </BackgroundContainer>
+      
     </>
   );
 }
