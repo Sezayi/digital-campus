@@ -26,7 +26,7 @@ const StyledContentContainer = styled.div`
   width: 100%;
   -webkit-box-flex: 1;
   flex-grow: 1;
-  max-width: 1140px;
+  max-width: 960px;
   margin: auto;
   padding: 0px 16px;
 `;
