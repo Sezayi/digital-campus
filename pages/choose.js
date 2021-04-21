@@ -95,7 +95,7 @@ function Choose() {
             <Card
               header="Observer"
               image={<RobotObserver />}
-              body="An observer is one who engages in observation or in watching an experiment."
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
         </Link>

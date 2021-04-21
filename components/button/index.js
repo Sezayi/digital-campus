@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const StyledButton = styled(motion.a)`
+  font-family: Oswald, sans-serif;
   display: inline-block;
   border-radius: 3px;
   padding: 1rem 0;

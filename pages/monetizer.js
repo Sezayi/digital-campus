@@ -74,7 +74,7 @@ export default function monetizer() {
         ref={containerRef}
       >
         <motion.div className="background" variants={sidebar} />
-        <Navigation />
+        <Navigation title="The basics of money" link="/" title2="The ethereum wallet"/>
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
       <StyledContainer>
@@ -82,7 +82,7 @@ export default function monetizer() {
         <RobotMonetizer />
       </StyledContainer>
       <StyledContentContainer>
-          <StyledTitle>The basiscs of money</StyledTitle>
+          <StyledTitle>The basics of money</StyledTitle>
           <StyledBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor labore fugit ratione, atque numquam beatae voluptate, esse a amet explicabo sit voluptates quia optio odio veniam iure facere cumque tempore molestiae at ea! Suscipit illo placeat minima iure vero. Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur incidunt totam necessitatibus et officia iste!</StyledBodyText>
       </StyledContentContainer>
 

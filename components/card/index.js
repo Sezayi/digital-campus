@@ -7,9 +7,8 @@ const StyledCard = styled(motion.div)`
   margin: 1rem;
   max-width: 400px;
   height: 480px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: rgba(245, 245, 245, 0.07) 0px 14px 66px, rgba(245, 245, 245, 0.03) 0px 10px 17px, rgba(245, 245, 245, 0.05) 0px 4px 7px
-  border-radius: 8px;
+  background-color: #272727;
+  border-radius: 4px;
 `;
 
 const CardHeader = styled.header`
@@ -17,6 +16,7 @@ const CardHeader = styled.header`
   padding: 1rem 2rem 1rem 2rem;
   color: white;
   font-size: 2rem;
+  font-family: Oswald, sans-serif;
 `;
 
 const ImageWrapper = styled.div`
@@ -33,6 +33,7 @@ const CardBody = styled.div`
 const StyledLink = styled.a`
   padding: 32px 32px 0px 32px;
   color: #f35b04;
+  font-family: Oswald, sans-serif;
 `;
 
 const Card = (props) => {
@@ -40,7 +41,7 @@ const Card = (props) => {
     <StyledCard
       whileHover={{
         position: "relative",
-        background: "black",
+        backgroundColor: "#272727",
         zIndex: 1,
         scale: 1.2,
         transition: {
