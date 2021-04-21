@@ -77,8 +77,9 @@ export default function monetizer() {
         <motion.div className="background" variants={sidebar} />
         <Navigation
           title="The blockchain"
-          link="/"
+          link="#blockchain"
           title2="Smart contracts"
+          link2="#smart"
           title3="Crypto currencies"
           title4="Ethereum wallet"
         />
@@ -89,7 +90,7 @@ export default function monetizer() {
         <RobotMonetizer />
       </StyledContainer>
       <StyledContentContainer>
-        <StyledTitle>The blockchain</StyledTitle>
+        <StyledTitle  id="blockchain">The blockchain</StyledTitle>
         <StyledBodyText>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
@@ -101,7 +102,29 @@ export default function monetizer() {
           numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
           incidunt totam necessitatibus et officia iste!
         </StyledBodyText>
-        <StyledTitle>Smart contracts</StyledTitle>
+        <StyledBodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+          labore fugit ratione, atque numquam beatae voluptate, esse a amet
+          explicabo sit voluptates quia optio odio veniam iure facere cumque
+          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+          incidunt totam necessitatibus et officia iste!
+        </StyledBodyText>
+        <StyledBodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+          labore fugit ratione, atque numquam beatae voluptate, esse a amet
+          explicabo sit voluptates quia optio odio veniam iure facere cumque
+          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+          incidunt totam necessitatibus et officia iste!
+        </StyledBodyText>
+        <StyledTitle id="smart">Smart contracts</StyledTitle>
         <StyledBodyText>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
