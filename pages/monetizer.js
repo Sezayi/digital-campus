@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 import useDimensions from "../utils/usedimensions";
-import MenuToggle  from "../components/MenuToggle";
-import Navigation  from "../components/Navigation";
+import MenuToggle from "../components/MenuToggle";
+import Navigation from "../components/Navigation";
 import RobotMonetizer from "../components/RobotMonetizer";
 
 const StyledContainer = styled.div`
@@ -32,13 +32,14 @@ const StyledContentContainer = styled.div`
 `;
 
 const StyledTitle = styled.h2`
-color: #fff`
+  color: #fff;
+`;
 
 const StyledBodyText = styled.p`
-color: #fff;
-font-size: 1.2em;
-line-height: 1.6;
-`
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 1.6;
+`;
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -74,7 +75,13 @@ export default function monetizer() {
         ref={containerRef}
       >
         <motion.div className="background" variants={sidebar} />
-        <Navigation title="The basics of money" link="/" title2="The ethereum wallet"/>
+        <Navigation
+          title="The blockchain"
+          link="/"
+          title2="Smart contracts"
+          title3="Crypto currencies"
+          title4="Ethereum wallet"
+        />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
       <StyledContainer>
@@ -82,10 +89,55 @@ export default function monetizer() {
         <RobotMonetizer />
       </StyledContainer>
       <StyledContentContainer>
-          <StyledTitle>The basics of money</StyledTitle>
-          <StyledBodyText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor labore fugit ratione, atque numquam beatae voluptate, esse a amet explicabo sit voluptates quia optio odio veniam iure facere cumque tempore molestiae at ea! Suscipit illo placeat minima iure vero. Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur incidunt totam necessitatibus et officia iste!</StyledBodyText>
+        <StyledTitle>The blockchain</StyledTitle>
+        <StyledBodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+          labore fugit ratione, atque numquam beatae voluptate, esse a amet
+          explicabo sit voluptates quia optio odio veniam iure facere cumque
+          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+          incidunt totam necessitatibus et officia iste!
+        </StyledBodyText>
+        <StyledTitle>Smart contracts</StyledTitle>
+        <StyledBodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+          labore fugit ratione, atque numquam beatae voluptate, esse a amet
+          explicabo sit voluptates quia optio odio veniam iure facere cumque
+          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+          incidunt totam necessitatibus et officia iste!
+        </StyledBodyText>
+        <StyledTitle>Crypto currencies</StyledTitle>
+        <StyledBodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+          labore fugit ratione, atque numquam beatae voluptate, esse a amet
+          explicabo sit voluptates quia optio odio veniam iure facere cumque
+          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+          incidunt totam necessitatibus et officia iste!
+        </StyledBodyText>
+        <StyledTitle>Ethereum wallet</StyledTitle>
+        <StyledBodyText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+          labore fugit ratione, atque numquam beatae voluptate, esse a amet
+          explicabo sit voluptates quia optio odio veniam iure facere cumque
+          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+          incidunt totam necessitatibus et officia iste!
+        </StyledBodyText>
       </StyledContentContainer>
-
     </>
   );
 }
