@@ -76,8 +76,10 @@ export default function monetizer() {
       >
         <motion.div className="background" variants={sidebar} />
         <Navigation
-          title="The blockchain"
-          link="#blockchain"
+          title="Home"
+          link="/"
+          title1="The blockchain"
+          link1="#blockchain"
           title2="Smart contracts"
           link2="#smart"
           title3="Crypto currencies"
@@ -90,7 +92,7 @@ export default function monetizer() {
         <RobotMonetizer />
       </StyledContainer>
       <StyledContentContainer>
-        <StyledTitle  id="blockchain">The blockchain</StyledTitle>
+        <StyledTitle id="blockchain">The blockchain</StyledTitle>
         <StyledBodyText>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
