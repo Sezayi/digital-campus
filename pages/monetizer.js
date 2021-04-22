@@ -5,6 +5,7 @@ import useDimensions from "../utils/usedimensions";
 import MenuToggle from "../components/MenuToggle";
 import Navigation from "../components/Navigation";
 import RobotMonetizer from "../components/RobotMonetizer";
+import ReadingProgress from "../utils/readingprogress";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -65,6 +66,7 @@ export default function monetizer() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const target = React.createRef();
 
   return (
     <>
@@ -87,11 +89,13 @@ export default function monetizer() {
         />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
+      <ReadingProgress target={target}/>
+      <div ref={target}>
       <StyledContainer>
         <h1>Monetizer starter</h1>
         <RobotMonetizer />
       </StyledContainer>
-      <StyledContentContainer>
+      <StyledContentContainer >
         <StyledTitle id="blockchain">The blockchain</StyledTitle>
         <StyledBodyText>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
@@ -163,6 +167,7 @@ export default function monetizer() {
           incidunt totam necessitatibus et officia iste!
         </StyledBodyText>
       </StyledContentContainer>
+      </div>
     </>
   );
 }
