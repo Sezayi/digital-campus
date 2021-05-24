@@ -19,21 +19,14 @@ const variants = {
   }
 };
 
-const StyledLink = styled.a`
-  padding: 8px;
-  color: #f35b04;
-  font-size: 1.5em;
-  margin-left: 8px;
-`;
+
 
 const MenuItem = ({ children }) => {
   return (
     <motion.li
       variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
     >
-      <StyledLink>{children}</StyledLink>
+      <div>{children}</div>
     </motion.li>
   );
 };

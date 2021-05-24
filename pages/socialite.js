@@ -4,7 +4,7 @@ import { motion, useCycle } from "framer-motion";
 import useDimensions from "../utils/usedimensions";
 import MenuToggle from "../components/MenuToggle";
 import Navigation from "../components/Navigation";
-import RobotMonetizer from "../components/RobotMonetizer";
+import RobotSocialite from "../components/RobotSocialite";
 import ReadingProgress from "../utils/readingprogress";
 
 const StyledContainer = styled.div`
@@ -79,25 +79,23 @@ export default function monetizer() {
         <motion.div className="background" variants={sidebar} />
         <Navigation
           title="Choose Explorer"
+          character="Socialite"
           link="/choose"
-          character="Monetizer"
-          title1="The blockchain"
+          title1="Proof of Humanity"
           link1="#blockchain"
-          title2="Smart contracts"
+          title2="NFT"
           link2="#smart"
-          title3="Crypto currencies"
-          title4="Ethereum wallet"
         />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
       <ReadingProgress target={target}/>
       <div ref={target}>
       <StyledContainer>
-        <h1>Monetizer starter</h1>
-        <RobotMonetizer />
+        <h1>Socialite starter</h1>
+        <RobotSocialite />
       </StyledContainer>
       <StyledContentContainer >
-        <StyledTitle id="blockchain">The blockchain</StyledTitle>
+        <StyledTitle id="blockchain">Proof of Humanity</StyledTitle>
         <StyledBodyText>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
@@ -131,31 +129,7 @@ export default function monetizer() {
           numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
           incidunt totam necessitatibus et officia iste!
         </StyledBodyText>
-        <StyledTitle id="smart">Smart contracts</StyledTitle>
-        <StyledBodyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
-          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
-          labore fugit ratione, atque numquam beatae voluptate, esse a amet
-          explicabo sit voluptates quia optio odio veniam iure facere cumque
-          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
-          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
-          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
-          incidunt totam necessitatibus et officia iste!
-        </StyledBodyText>
-        <StyledTitle>Crypto currencies</StyledTitle>
-        <StyledBodyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
-          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
-          labore fugit ratione, atque numquam beatae voluptate, esse a amet
-          explicabo sit voluptates quia optio odio veniam iure facere cumque
-          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
-          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
-          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
-          incidunt totam necessitatibus et officia iste!
-        </StyledBodyText>
-        <StyledTitle>Ethereum wallet</StyledTitle>
+        <StyledTitle id="smart">NFT</StyledTitle>
         <StyledBodyText>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum

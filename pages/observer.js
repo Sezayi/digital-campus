@@ -4,7 +4,7 @@ import { motion, useCycle } from "framer-motion";
 import useDimensions from "../utils/usedimensions";
 import MenuToggle from "../components/MenuToggle";
 import Navigation from "../components/Navigation";
-import RobotMonetizer from "../components/RobotMonetizer";
+import RobotObserver from "../components/RobotObserver";
 import ReadingProgress from "../utils/readingprogress";
 
 const StyledContainer = styled.div`
@@ -80,7 +80,7 @@ export default function monetizer() {
         <Navigation
           title="Choose Explorer"
           link="/choose"
-          character="Monetizer"
+          character="Observer"
           title1="The blockchain"
           link1="#blockchain"
           title2="Smart contracts"
@@ -93,8 +93,8 @@ export default function monetizer() {
       <ReadingProgress target={target}/>
       <div ref={target}>
       <StyledContainer>
-        <h1>Monetizer starter</h1>
-        <RobotMonetizer />
+        <h1>Observer starter</h1>
+        <RobotObserver />
       </StyledContainer>
       <StyledContentContainer >
         <StyledTitle id="blockchain">The blockchain</StyledTitle>

@@ -34,6 +34,14 @@ h3 {
   margin: 1rem;
 }
 
+h4 {
+  font-family: Oswald, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color:#e6d600;
+  margin: 1rem;
+}
+
 * {
   box-sizing: border-box;
 }

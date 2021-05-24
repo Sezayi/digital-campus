@@ -81,7 +81,7 @@ function Choose() {
             />
           </StyledA >
         </Link>
-        <Link href="/monetizer">
+        <Link href="/socialite">
           <StyledA >
             <Card
               header="Socialite"
@@ -90,7 +90,7 @@ function Choose() {
             />
           </StyledA >
         </Link>
-        <Link href="/monetizer">
+        <Link href="/observer">
           <StyledA >
             <Card
               header="Observer"
