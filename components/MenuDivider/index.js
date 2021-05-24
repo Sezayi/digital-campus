@@ -23,11 +23,11 @@ const variants = {
 
 const MenuItem = ({ children }) => {
   return (
-    <motion.li
+    <motion.div
       variants={variants}
     >
       <div>{children}</div>
-    </motion.li>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 import useDimensions from "../utils/usedimensions";
@@ -6,6 +6,7 @@ import MenuToggle from "../components/MenuToggle";
 import Navigation from "../components/Navigation";
 import RobotMonetizer from "../components/RobotMonetizer";
 import ReadingProgress from "../utils/readingprogress";
+import useOnClickOutside from "../utils/useOnClickOutside";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -63,13 +64,18 @@ const sidebar = {
 };
 
 export default function monetizer() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, setToggleOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const target = React.createRef();
 
+  const ref = useRef();
+  useOnClickOutside(ref, () => setToggleOpen(false));
+
+
   return (
     <>
+      <div ref={ref}>
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -88,8 +94,9 @@ export default function monetizer() {
           title3="Crypto currencies"
           title4="Ethereum wallet"
         />
-        <MenuToggle toggle={() => toggleOpen()} />
+        <MenuToggle toggle={() => setToggleOpen(!isOpen)} />
       </motion.nav>
+      </div>
       <ReadingProgress target={target}/>
       <div ref={target}>
       <StyledContainer>

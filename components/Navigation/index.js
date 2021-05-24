@@ -28,11 +28,13 @@ const Wrapper = styled.div`
 const Line = styled.hr`
   color: rgba(0, 0, 0, 0.25);
   width: -200px;
+  pointer-events: none;
 `;
 
 const CharacterTitle = styled.h4`
   font-size: 1.6em;
   margin: 32px 0px 16px 24px;
+  
 `;
 
 const Navigation = (props) => (

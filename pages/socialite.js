@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 import useDimensions from "../utils/usedimensions";
@@ -6,6 +6,7 @@ import MenuToggle from "../components/MenuToggle";
 import Navigation from "../components/Navigation";
 import RobotSocialite from "../components/RobotSocialite";
 import ReadingProgress from "../utils/readingprogress";
+import useOnClickOutside from "../utils/useOnClickOutside";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -63,85 +64,90 @@ const sidebar = {
 };
 
 export default function monetizer() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, setToggleOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const target = React.createRef();
 
+  const ref = useRef();
+  useOnClickOutside(ref, () => setToggleOpen(false));
+
   return (
     <>
-      <motion.nav
-        initial={false}
-        animate={isOpen ? "open" : "closed"}
-        custom={height}
-        ref={containerRef}
-      >
-        <motion.div className="background" variants={sidebar} />
-        <Navigation
-          title="Choose Explorer"
-          character="Socialite"
-          link="/choose"
-          title1="Proof of Humanity"
-          link1="#blockchain"
-          title2="NFT"
-          link2="#smart"
-        />
-        <MenuToggle toggle={() => toggleOpen()} />
-      </motion.nav>
-      <ReadingProgress target={target}/>
+      <div ref={ref}>
+        <motion.nav
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+          custom={height}
+          ref={containerRef}
+        >
+          <motion.div className="background" variants={sidebar} />
+          <Navigation
+            title="Choose Explorer"
+            character="Socialite"
+            link="/choose"
+            title1="Proof of Humanity"
+            link1="#blockchain"
+            title2="NFT"
+            link2="#smart"
+          />
+          <MenuToggle toggle={() => setToggleOpen(!isOpen)} />
+        </motion.nav>
+      </div>
+      <ReadingProgress target={target} />
       <div ref={target}>
-      <StyledContainer>
-        <h1>Socialite starter</h1>
-        <RobotSocialite />
-      </StyledContainer>
-      <StyledContentContainer >
-        <StyledTitle id="blockchain">Proof of Humanity</StyledTitle>
-        <StyledBodyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
-          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
-          labore fugit ratione, atque numquam beatae voluptate, esse a amet
-          explicabo sit voluptates quia optio odio veniam iure facere cumque
-          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
-          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
-          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
-          incidunt totam necessitatibus et officia iste!
-        </StyledBodyText>
-        <StyledBodyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
-          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
-          labore fugit ratione, atque numquam beatae voluptate, esse a amet
-          explicabo sit voluptates quia optio odio veniam iure facere cumque
-          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
-          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
-          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
-          incidunt totam necessitatibus et officia iste!
-        </StyledBodyText>
-        <StyledBodyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
-          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
-          labore fugit ratione, atque numquam beatae voluptate, esse a amet
-          explicabo sit voluptates quia optio odio veniam iure facere cumque
-          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
-          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
-          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
-          incidunt totam necessitatibus et officia iste!
-        </StyledBodyText>
-        <StyledTitle id="smart">NFT</StyledTitle>
-        <StyledBodyText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
-          culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
-          labore fugit ratione, atque numquam beatae voluptate, esse a amet
-          explicabo sit voluptates quia optio odio veniam iure facere cumque
-          tempore molestiae at ea! Suscipit illo placeat minima iure vero.
-          Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
-          numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
-          incidunt totam necessitatibus et officia iste!
-        </StyledBodyText>
-      </StyledContentContainer>
+        <StyledContainer>
+          <h1>Socialite starter</h1>
+          <RobotSocialite />
+        </StyledContainer>
+        <StyledContentContainer>
+          <StyledTitle id="blockchain">Proof of Humanity</StyledTitle>
+          <StyledBodyText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+            culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+            labore fugit ratione, atque numquam beatae voluptate, esse a amet
+            explicabo sit voluptates quia optio odio veniam iure facere cumque
+            tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+            Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+            numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+            incidunt totam necessitatibus et officia iste!
+          </StyledBodyText>
+          <StyledBodyText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+            culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+            labore fugit ratione, atque numquam beatae voluptate, esse a amet
+            explicabo sit voluptates quia optio odio veniam iure facere cumque
+            tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+            Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+            numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+            incidunt totam necessitatibus et officia iste!
+          </StyledBodyText>
+          <StyledBodyText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+            culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+            labore fugit ratione, atque numquam beatae voluptate, esse a amet
+            explicabo sit voluptates quia optio odio veniam iure facere cumque
+            tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+            Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+            numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+            incidunt totam necessitatibus et officia iste!
+          </StyledBodyText>
+          <StyledTitle id="smart">NFT</StyledTitle>
+          <StyledBodyText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            architecto quisquam hic laudantium nesciunt nihil, deleniti ipsum
+            culpa odit sequi cupiditate. Eaque dignissimos dolorum saepe dolor
+            labore fugit ratione, atque numquam beatae voluptate, esse a amet
+            explicabo sit voluptates quia optio odio veniam iure facere cumque
+            tempore molestiae at ea! Suscipit illo placeat minima iure vero.
+            Dignissimos odio enim iste necessitatibus quos aliquam. Obcaecati
+            numquam enim optio nemo qui, eos quisquam culpa eligendi aspernatur
+            incidunt totam necessitatibus et officia iste!
+          </StyledBodyText>
+        </StyledContentContainer>
       </div>
     </>
   );
