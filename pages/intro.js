@@ -1,15 +1,15 @@
 import Link from "next/link";
+import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import {
   Linebreaker,
   WindupChildren,
-  useWindupString,
   Pace,
   Pause,
-  CharWrapper,
 } from "windups";
 import ButtonSecondary from "../components/buttonSecondary";
+
 
 const StyledContainerMain = styled(motion.div)`
   margin: auto;
@@ -65,7 +65,7 @@ function Intro() {
                 <StyledText>
                   <Pace ms={50}>
                     {
-                      "Become part of our movement enabling you to make change happen in your career, your organization and, above all, your life."
+                      "Become part of our movement enabling you to make positive change happen in your organisation, your career and, above all, your life."
                     }
                   </Pace>
                   <Pause ms={1000} />
@@ -74,13 +74,12 @@ function Intro() {
 
               <StyledTextTwo>
                 <Pace ms={80}>
-                  <div>{"Welcome to.."}</div>
+                  {"Welcome to.."} {' '}
                   <Pause ms={1500} />
                   <span
                     style={{
                       color: "#0086a8",
-                      marginTop: "3rem",
-                      fontSize: "3rem",
+                      fontSize: "4rem",
                     }}
                   >
                     {"HYPER ISLAND"}

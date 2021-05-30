@@ -17,8 +17,7 @@ const StyledButton = styled(motion.a)`
   text-decoration: none;
 
   &:hover {
-    color: white;
-    background-color: #b8c300;
+    color: #b8c300;
     border: 1px solid #b8c300;
     cursor: pointer;
   }
