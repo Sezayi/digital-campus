@@ -1,44 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+  font-family: "TheSans";
+  src: url("/fonts/TheSans-Plain.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TheSans";
+  src: url("/fonts/TheSans-B6SemiBold.otf");
+  font-style: bold;
+  font-weight: 600;
+  font-display: swap;
+}
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  background-color: rgb(34,34,34);
+  font-family: 'TheSans', sans-serif;
+  font-weight: 400;
+  background-image: url("/public/images/citybg.png");
+  background-color: rgb(0, 0, 0);
 }
 
 h1 {
-  font-family: Oswald, sans-serif;
+  font-family: TheSans, sans-serif;
   font-size: 5em;
-  font-weight: 400;
+  font-weight: 600;
   color:#FFFFFF;
   text-align: center;
 }
 
 h2 {
-  font-family: Oswald, sans-serif;
+  font-family: TheSans, sans-serif;
   font-size: 3em;
-  font-weight: 400;
+  font-weight: 600;
   color:#FFFFFF;
   margin: 1rem 0rem;
 }
 
 h3 {
-  font-family: Oswald, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  color:#f35b04;
+  font-family: TheSans, sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color:#ffffff;
   margin: 1rem;
 }
 
 h4 {
-  font-family: Oswald, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  color:#e6d600;
+  font-family: TheSans, sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color:#ffffff;
   margin: 1rem;
 }
 
