@@ -73,7 +73,7 @@ function Choose() {
         </Link>
       </StyledContainer>
       <CharacterContainer>
-        <Link href="/monetizer">
+        <Link href="/">
           <StyledA >
             <Card
               header="VUCA tower"
@@ -83,7 +83,7 @@ function Choose() {
             />
           </StyledA >
         </Link>
-        <Link href="/socialite">
+        <Link href="/">
           <StyledA >
             <Card
               header="Zero Carbon harbor"
@@ -93,7 +93,7 @@ function Choose() {
             />
           </StyledA >
         </Link>
-        <Link href="/observer">
+        <Link href="/">
           <StyledA >
             <Card
               header="A-Island"
@@ -103,7 +103,7 @@ function Choose() {
             />
           </StyledA >
         </Link>
-        <Link href="/observer">
+        <Link href="/">
           <StyledA >
             <Card
               header="ML highway"
