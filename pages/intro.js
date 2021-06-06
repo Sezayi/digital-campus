@@ -1,13 +1,8 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import {
-  Linebreaker,
-  WindupChildren,
-  Pace,
-  Pause,
-} from "windups";
-import ButtonSecondary from "../components/buttonSecondary";
+import { Linebreaker, WindupChildren, Pace, Pause } from "windups";
 import Button from "../components/button";
 import Image from "next/image";
 
@@ -18,15 +13,14 @@ const StyledBackgroundContainer = styled.div`
   position: absolute;
 `;
 
-
 const StyledContainerMain = styled(motion.div)`
   margin: auto;
   width: 60%;
   padding: 10px;
   @media (max-width: 768px) {
     margin: auto;
-  width: 100vw;
-  padding: 8px;
+    width: 100vw;
+    padding: 8px;
   }
 `;
 
@@ -38,8 +32,8 @@ const StyledContainer = styled(motion.div)`
   transform: translateY(-50%);
   @media (max-width: 768px) {
     margin: 0;
-  position: absolute;
-  top: 45%;
+    position: absolute;
+    top: 45%;
   }
 `;
 
@@ -63,16 +57,16 @@ const StyledTextTwo = styled.h3`
 `;
 
 const ButtonWrapper = styled.div`
-position: fixed;
-bottom: 10%;
-right: 10%;
-
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
 `;
 
 function Intro() {
+  if (typeof window === "undefined") return null
   return (
     <>
-    <StyledBackgroundContainer>
+      <StyledBackgroundContainer>
         <Image
           src="/images/wereld.jpg"
           alt="city background"
@@ -81,17 +75,16 @@ function Intro() {
         />
       </StyledBackgroundContainer>
       <StyledContainerMain>
-        
-        <StyledContainer >
+        <StyledContainer>
           <Linebreaker width={260}>
             <WindupChildren>
               <div>
-              {" "}
-                  <Pause ms={2500} />
+                {" "}
+                <Pause ms={2500} />
                 <StyledText>
                   <Pace ms={50}>
                     {
-                    "Become part of our movement enabling you to make positive change happen in your organisation, your career and, above all, your life."
+                      "Become part of our movement enabling you to make positive change happen in your organisation, your career and, above all, your life."
                     }
                   </Pace>
                   <Pause ms={1000} />
@@ -100,8 +93,7 @@ function Intro() {
 
               <StyledTextTwo>
                 <Pace ms={80}>
-                {"Welcome to.."} {' '}
-                  <Pause ms={1500} />
+                  {"Welcome to.."} <Pause ms={1500} />
                   <span
                     style={{
                       color: "#F05F3E",
@@ -118,9 +110,9 @@ function Intro() {
         </StyledContainer>
       </StyledContainerMain>
       <Link href="/choose">
-      <ButtonWrapper>
-      <Button title="CHOOSE DESTINATION" />
-      </ButtonWrapper>
+        <ButtonWrapper>
+          <Button title="CHOOSE DESTINATION" />
+        </ButtonWrapper>
       </Link>
     </>
   );
