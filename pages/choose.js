@@ -78,7 +78,7 @@ function Choose() {
             <Card
               header="VUCA tower"
               subheader="Singapore"
-              image={"/images/citybg.png"}
+              image={"/images/vuca.jpeg"}
               body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
             />
           </StyledA >
@@ -88,7 +88,7 @@ function Choose() {
             <Card
               header="Zero Carbon harbor"
               subheader="Napoli"
-              image={"/images/citybg.png"}
+              image={"/images/zeroharbor.jpeg"}
               body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
             />
           </StyledA >
@@ -98,7 +98,7 @@ function Choose() {
             <Card
               header="A-Island"
               subheader="Japan"
-              image={"/images/citybg.png"}
+              image={"/images/aisland.jpeg"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
@@ -108,7 +108,7 @@ function Choose() {
             <Card
               header="ML highway"
               subheader="New York"
-              image={"/images/citybg.png"}
+              image={"/images/mlhighway.jpeg"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >

@@ -8,7 +8,7 @@ const StyledCard = styled(motion.div)`
   padding: 0 0 32px;
   margin: 1rem;
   max-width: 400px;
-  height: 520px;
+  height: 560px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 `;
@@ -30,9 +30,9 @@ const CardSubHeader = styled.header`
 `;
 
 const ImageWrapper = styled.div`
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
+  
+  height: 240px;
+  width: 100%;
 `;
 
 const CardBody = styled.div`
@@ -60,11 +60,11 @@ const Card = (props) => {
         },
       }}
     >
-      <ImageWrapper><Image src={props.image} alt="city" width="auto" height="auto"/></ImageWrapper>
+      <ImageWrapper><Image src={props.image} alt="city" objectFit="cover" width="400" height="240"/></ImageWrapper>
       <CardHeader>{props.header}</CardHeader>
       <CardSubHeader>{props.subheader}</CardSubHeader>
       <CardBody>{props.body}</CardBody>
-      <StyledLink>VISIT THE PLACE</StyledLink>
+      <StyledLink>VISIT THIS PLACE</StyledLink>
     </StyledCard>
   );
 };
