@@ -69,7 +69,7 @@ function Choose() {
         }}
       >
         <Link href="/">
-          <StyledPagetitle>Choose your starting point</StyledPagetitle>
+          <StyledPagetitle>Choose your location</StyledPagetitle>
         </Link>
       </StyledContainer>
       <CharacterContainer>
@@ -77,6 +77,7 @@ function Choose() {
           <StyledA >
             <Card
               header="VUCA tower"
+              subheader="Singapore"
               image={"/images/citybg.png"}
               body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
             />
@@ -85,7 +86,8 @@ function Choose() {
         <Link href="/socialite">
           <StyledA >
             <Card
-              header="Hardware Harbor"
+              header="Zero Carbon harbor"
+              subheader="Napoli"
               image={"/images/citybg.png"}
               body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
             />
@@ -95,6 +97,7 @@ function Choose() {
           <StyledA >
             <Card
               header="A-Island"
+              subheader="Japan"
               image={"/images/citybg.png"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
@@ -103,7 +106,8 @@ function Choose() {
         <Link href="/observer">
           <StyledA >
             <Card
-              header="A-Island"
+              header="ML highway"
+              subheader="New York"
               image={"/images/citybg.png"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them."
             />

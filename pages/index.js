@@ -8,8 +8,6 @@ import { useEffect, useRef, useState } from "react";
 import NET from "vanta/dist/vanta.net.min";
 import * as THREE from "three";
 
-//IMAGES
-import explorebg from "../public/images/explorebg.svg";
 
 const StyledBackgroundContainer = styled.div`
   height: 100vh;
@@ -62,7 +60,8 @@ export default function Home() {
           color: 0x2AA18D,
           backgroundColor: 0x222222,
           backgroundAlpha: 0.4,
-          maxDistance: 24.0,
+          maxDistance: 28.0,
+          spacing: 20.00
         })
       );
     }
