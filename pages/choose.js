@@ -11,7 +11,6 @@ import Image from "next/image";
 
 const StyledContainerWrapper = styled.div`
   height: 100vh;
-  z-index: 100;
   background-image: linear-gradient(to bottom right, #1B747B 0%, #123D5C  60%, #123D5C  100%);
 `;
 

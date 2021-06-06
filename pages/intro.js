@@ -6,7 +6,6 @@ import { Linebreaker, WindupChildren, Pace, Pause } from "windups";
 import Button from "../components/button";
 import Image from "next/image";
 
-
 const StyledBackgroundContainer = styled.div`
   height: 100vh;
   width: 100%;
@@ -17,6 +16,7 @@ const StyledContainerMain = styled(motion.div)`
   margin: auto;
   width: 60%;
   padding: 10px;
+  height: 600px;
   @media (max-width: 768px) {
     margin: auto;
     width: 100vw;
@@ -47,14 +47,6 @@ const StyledText = styled.h3`
   }
 `;
 
-const StyledTextTwo = styled.h3`
-  font-size: 2.4rem;
-  line-height: 2em;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-    line-height: 2em;
-  }
-`;
 
 const ButtonWrapper = styled.div`
   position: fixed;
@@ -63,7 +55,7 @@ const ButtonWrapper = styled.div`
 `;
 
 function Intro() {
-  if (typeof window === "undefined") return null
+  if (typeof window === "undefined") return null;
   return (
     <>
       <StyledBackgroundContainer>
@@ -83,28 +75,34 @@ function Intro() {
                 <Pause ms={2500} />
                 <StyledText>
                   <Pace ms={50}>
-                    {
-                      "Become part of our movement enabling you to make positive change happen in your organisation, your career and, above all, your life."
-                    }
+                    {"Become part of a movement that makes positive change happen in our organisation today so that we secure a prosperous, peaceful and liveable planet for tomorrow."}
                   </Pace>
                   <Pause ms={1000} />
                 </StyledText>
+                <StyledText>
+                  {"Let's travel to..."}
+                </StyledText>
+                <StyledText>
+                  <Pace ms={80}>
+                     <Pause ms={1500} />
+                    <div
+                      style={{
+                        marginTop: "1em",
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: "#F05F3E",
+                          fontSize: "3rem",
+                          lineHeight: "1em",
+                        }}
+                      >
+                        {"HYPER ISLAND"}
+                      </span>
+                    </div>
+                  </Pace>
+                </StyledText>
               </div>
-
-              <StyledTextTwo>
-                <Pace ms={80}>
-                  {"Welcome to.."} <Pause ms={1500} />
-                  <span
-                    style={{
-                      color: "#F05F3E",
-                      fontSize: "3rem",
-                      lineHeight: "1em",
-                    }}
-                  >
-                    {"HYPER ISLAND"}
-                  </span>
-                </Pace>
-              </StyledTextTwo>
             </WindupChildren>
           </Linebreaker>
         </StyledContainer>
