@@ -5,29 +5,25 @@ const StyledButton = styled(motion.a)`
   font-family: Oswald, sans-serif;
   display: inline-block;
   border-radius: 3px;
-  padding: 1.4rem 0;
+  padding: 1.7rem;
   margin: 0.5rem 1rem;
-  width: 16rem;
   height: 5rem;
-  background: transparent;
   color: #ffffff;
-  border: 2px solid #b8c300;
-  background-color: rgb(250,250,250, 0.1);
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-decoration: none;
-
-  &:hover {
-    color: white;
-    background-color: #b8c300;
-    cursor: pointer;
-  }
+  background-image: linear-gradient(to bottom right, #519E8E 0%, #123D5C  60%, #123D5C  100%);
 `;
 
 const Button = (props) => {
   return (
     <StyledButton
-      whileHover={{ scale: 1.1 }}
+      whileHover={{
+        scale: 1.1,
+        cursor: "pointer",
+        backgroundImage: "linear-gradient(to bottom right, #519E8E 0%, #519E8E  100%, #123D5C  100%)",
+        transition: "0.5s all"
+      }}
       href={props.href}
       target={props.target}
       rel={props.rel}

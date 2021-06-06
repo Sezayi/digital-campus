@@ -2,20 +2,18 @@ import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Card from "../components/card";
-import RobotMonetizer from "../components/RobotMonetizer";
-import RobotSocialite from "../components/RobotSocialite";
-import RobotObserver from "../components/RobotObserver";
+import Image from "next/image";
+
 
 //IMAGES
-// import explorebg from "../public/images/explorebg.svg";
 
-// const BackgroundContainer = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   z-index: -1;
-//   background-size: cover;
-//   background-image: url(${explorebg})
-// `;
+
+
+const StyledContainerWrapper = styled.div`
+  height: 100vh;
+  z-index: 100;
+  background-image: linear-gradient(to bottom right, #1B747B 0%, #123D5C  60%, #123D5C  100%);
+`;
 
 const StyledContainer = styled(motion.div)`
   height: 320x;
@@ -34,6 +32,7 @@ const StyledPagetitle = styled.h1`
   }
 `;
 
+
 const CharacterContainer = styled.div`
   height: auto;
   display: flex;
@@ -50,6 +49,8 @@ cursor: pointer;
 function Choose() {
   return (
     <>
+
+<StyledContainerWrapper>
       <StyledContainer
         initial="hidden"
         animate="visible"
@@ -68,15 +69,15 @@ function Choose() {
         }}
       >
         <Link href="/">
-          <StyledPagetitle>Choose your explorer</StyledPagetitle>
+          <StyledPagetitle>Choose your starting point</StyledPagetitle>
         </Link>
       </StyledContainer>
       <CharacterContainer>
         <Link href="/monetizer">
           <StyledA >
             <Card
-              header="Monetizer"
-              image={<RobotMonetizer />}
+              header="VUCA tower"
+              image={"/images/citybg.png"}
               body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
             />
           </StyledA >
@@ -84,8 +85,8 @@ function Choose() {
         <Link href="/socialite">
           <StyledA >
             <Card
-              header="Socialite"
-              image={<RobotSocialite />}
+              header="Hardware Harbor"
+              image={"/images/citybg.png"}
               body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
             />
           </StyledA >
@@ -93,13 +94,24 @@ function Choose() {
         <Link href="/observer">
           <StyledA >
             <Card
-              header="Observer"
-              image={<RobotObserver />}
+              header="A-Island"
+              image={"/images/citybg.png"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/observer">
+          <StyledA >
+            <Card
+              header="A-Island"
+              image={"/images/citybg.png"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
         </Link>
       </CharacterContainer>
+      </StyledContainerWrapper>
+  
     </>
   );
 }

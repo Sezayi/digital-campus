@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 const StyledCard = styled(motion.div)`
   overflow: hidden;
@@ -7,7 +9,7 @@ const StyledCard = styled(motion.div)`
   margin: 1rem;
   max-width: 400px;
   height: 480px;
-  background-color: #272727;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 `;
 
@@ -16,7 +18,7 @@ const CardHeader = styled.header`
   padding: 1rem 2rem 1rem 2rem;
   color: white;
   font-size: 2rem;
-  font-family: Oswald, sans-serif;
+  font-family: TheSans, sans-serif;
 `;
 
 const ImageWrapper = styled.div`
@@ -32,8 +34,9 @@ const CardBody = styled.div`
 
 const StyledLink = styled.a`
   padding: 32px 32px 0px 32px;
-  color: #f35b04;
-  font-family: Oswald, sans-serif;
+  color: #ffffff;
+  font-size: 1.4em;
+  font-family: TheSans, sans-serif;
 `;
 
 const Card = (props) => {
@@ -41,18 +44,18 @@ const Card = (props) => {
     <StyledCard
       whileHover={{
         position: "relative",
-        backgroundColor: "#272727",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
         zIndex: 1,
-        scale: 1.2,
+        scale: 1.1,
         transition: {
           duration: 0.2,
         },
       }}
     >
-      <ImageWrapper>{props.image}</ImageWrapper>
+      <ImageWrapper><Image src={props.image} alt="city" width="auto" height="auto"/></ImageWrapper>
       <CardHeader>{props.header}</CardHeader>
       <CardBody>{props.body}</CardBody>
-      <StyledLink>START EXPLORING</StyledLink>
+      <StyledLink>VISIT THE PLACE</StyledLink>
     </StyledCard>
   );
 };

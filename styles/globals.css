@@ -20,8 +20,7 @@ body {
   margin: 0;
   font-family: 'TheSans', sans-serif;
   font-weight: 400;
-  background-image: url("/public/images/citybg.png");
-  background-color: rgb(0, 0, 0);
+  background: #000000;  /* fallback for old browsers */
 }
 
 h1 {

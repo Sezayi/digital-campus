@@ -7,7 +7,7 @@ const StyledButton = styled(motion.a)`
   border-radius: 3px;
   padding: 1.4rem 0;
   margin: 0.5rem 1rem;
-  width: 16rem;
+  width: 24rem;
   height: 5rem;
   background: transparent;
   color: #ffffff;
@@ -17,8 +17,9 @@ const StyledButton = styled(motion.a)`
   text-decoration: none;
 
   &:hover {
-    color: #b8c300;
-    border: 1px solid #b8c300;
+    color: #ffffff ;
+    border: 1px solid #519E8E ;
+    background: #519E8E;
     cursor: pointer;
   }
 `;
@@ -26,6 +27,7 @@ const StyledButton = styled(motion.a)`
 const ButtonSecondary = (props) => {
   return (
     <StyledButton
+      whileHover={{scale: 1.1}}
       href={props.href}
       target={props.target}
       rel={props.rel}

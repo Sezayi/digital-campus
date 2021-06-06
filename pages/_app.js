@@ -28,10 +28,24 @@ function MyApp({ Component, pageProps, router }) {
         exit="pageExit"
         variants={{
           pageInitial: {
-            opacity: 0
+            opacity: 0,
+            transition: {
+              ease: "easeIn", duration: 1,
+              delay: 1
+           }
           },
           pageAnimate: {
             opacity: 1,
+            transition: {
+               ease: "easeIn", duration: 1,
+               delay: 1
+            }
+          },
+          pageExit: {
+            opacity: 0,
+            transition: {
+               ease: "easeOut", duration: 1
+            }
           },
         }}
       >
