@@ -4,16 +4,22 @@ import { motion } from "framer-motion";
 const StyledButton = styled(motion.a)`
   font-family: Oswald, sans-serif;
   display: inline-block;
-  border-radius: 3px;
-  padding: 1.7rem;
+  padding: 1rem 2.4rem 1rem 2.4rem;
+  letter-spacing: 0.1em;
   margin: 0.5rem 1rem;
-  height: 5rem;
   color: #ffffff;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
   text-decoration: none;
-  background-image: linear-gradient(to bottom right, #519E8E 0%, #123D5C  60%, #123D5C  100%);
+  background-color: #F26849;
 `;
+
+// background-image: linear-gradient(to bottom right, #519E8E 0%, #123D5C  60%, #123D5C  100%);
+
+ // backgroundImage: "linear-gradient(to bottom right, #519E8E 0%, #519E8E  100%, #123D5C  100%)",
+        // transition: "0.5s all"
+
 
 const Button = (props) => {
   return (
@@ -21,8 +27,6 @@ const Button = (props) => {
       whileHover={{
         scale: 1.1,
         cursor: "pointer",
-        backgroundImage: "linear-gradient(to bottom right, #519E8E 0%, #519E8E  100%, #123D5C  100%)",
-        transition: "0.5s all"
       }}
       href={props.href}
       target={props.target}

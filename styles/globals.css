@@ -21,6 +21,7 @@ body {
   font-family: 'TheSans', sans-serif;
   font-weight: 400;
   background: #000000;  /* fallback for old browsers */
+  overflow: hidden; /* Hide scrollbars */
 }
 
 h1 {
@@ -33,10 +34,10 @@ h1 {
 
 h2 {
   font-family: TheSans, sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600;
   color:#FFFFFF;
-  margin: 1rem 0rem;
+  margin-top: 2rem
 }
 
 h3 {

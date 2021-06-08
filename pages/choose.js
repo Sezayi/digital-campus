@@ -78,7 +78,7 @@ function Choose() {
               header="VUCA tower"
               subheader="Singapore"
               image={"/images/vuca.jpeg"}
-              body="A monetizer is someone that likes, broadly speaking, the process of converting something into money."
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
         </Link>
@@ -86,9 +86,9 @@ function Choose() {
           <StyledA >
             <Card
               header="Zero Carbon harbor"
-              subheader="Napoli"
+              subheader="Cape Town"
               image={"/images/zeroharbor.jpeg"}
-              body="A socialite generally spends a significant amount of time attending various fashionable social gatherings."
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
         </Link>
@@ -96,9 +96,9 @@ function Choose() {
           <StyledA >
             <Card
               header="A-Island"
-              subheader="Japan"
+              subheader="Birmingham"
               image={"/images/aisland.jpeg"}
-              body="An observer is one who engages in observation, follows events closely and comments publicly on them."
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
         </Link>
@@ -106,9 +106,9 @@ function Choose() {
           <StyledA >
             <Card
               header="ML highway"
-              subheader="New York"
+              subheader="Amersfoort"
               image={"/images/mlhighway.jpeg"}
-              body="An observer is one who engages in observation, follows events closely and comments publicly on them."
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
         </Link>

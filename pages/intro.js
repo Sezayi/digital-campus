@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Linebreaker, WindupChildren, Pace, Pause } from "windups";
-import Button from "../components/button";
+import ButtonSecondary from "../components/buttonSecondary";
 import Image from "next/image";
 
 const StyledBackgroundContainer = styled.div`
@@ -14,7 +13,7 @@ const StyledBackgroundContainer = styled.div`
 
 const StyledContainerMain = styled(motion.div)`
   margin: auto;
-  width: 60%;
+  width: 50%;
   padding: 10px;
   height: 600px;
   @media (max-width: 768px) {
@@ -40,19 +39,43 @@ const StyledContainer = styled(motion.div)`
 const StyledText = styled.h3`
   font-size: 2.4rem;
   line-height: 1.4em;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px #000000;
   @media (max-width: 768px) {
     font-size: 1.2rem;
     line-height: 2em;
   }
 `;
 
-
 const ButtonWrapper = styled.div`
   position: fixed;
-  bottom: 10%;
-  right: 10%;
+  bottom: 5%;
+  right: 5%;
 `;
+
+const StyledLinkWrapper = styled.div`
+  margin-top: 2em;
+`;
+
+
+
+const StyledLink = styled.a`
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1em;
+  text-decoration: none;
+  text-shadow: none;
+  padding: 1rem 2rem 1rem 2rem;
+  border: 1px solid white;
+  &:hover {
+    color: #ffffff;
+    background: #F26849 ;
+    transition: all 0.4s ease 0s;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid #F26849;
+`;
+
+
 
 function Intro() {
   if (typeof window === "undefined") return null;
@@ -75,31 +98,29 @@ function Intro() {
                 <Pause ms={2500} />
                 <StyledText>
                   <Pace ms={50}>
-                    {"Become part of a movement that makes positive change happen in our organisation today so that we secure a prosperous, peaceful and liveable planet for tomorrow."}
+                    {
+                      "It's time to rethink the spaces we live, work and thrive in. From changing business landscapes to climate challenges. We are all operating in uncertain environments"
+                    }
                   </Pace>
                   <Pause ms={1000} />
                 </StyledText>
                 <StyledText>
-                  {"Let's travel to..."}
+                  <Pace ms={50}>
+                    {
+                      "That's why this summer we launch our University Campus. An online learning experience to shape the environments of tomorrow together."
+                    }
+                  </Pace>
                 </StyledText>
                 <StyledText>
                   <Pace ms={80}>
-                     <Pause ms={1500} />
-                    <div
-                      style={{
-                        marginTop: "1em",
-                      }}
-                    >
-                      <span
-                        style={{
-                          color: "#F05F3E",
-                          fontSize: "3rem",
-                          lineHeight: "1em",
-                        }}
+                    <Pause ms={1500} />
+                    <StyledLinkWrapper>
+                      <StyledLink
+                        href="/choose"
                       >
-                        {"HYPER ISLAND"}
-                      </span>
-                    </div>
+                        {"Visit Summer University Campus"}
+                      </StyledLink>
+                      </StyledLinkWrapper>
                   </Pace>
                 </StyledText>
               </div>
@@ -109,7 +130,7 @@ function Intro() {
       </StyledContainerMain>
       <Link href="/choose">
         <ButtonWrapper>
-          <Button title="CHOOSE DESTINATION" />
+          <ButtonSecondary title="Skip" />
         </ButtonWrapper>
       </Link>
     </>
