@@ -85,7 +85,7 @@ const StyledLink = styled.a`
 
 function Intro() {
   if (typeof window === "undefined") return null;
-  const width = (window.innerWidth < 600 ? 180 : 260)
+  const width = (window.innerWidth < 600 ? 185 : 260)
   return (
     <>
       <StyledBackgroundContainer>
