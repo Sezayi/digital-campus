@@ -71,6 +71,7 @@ const StyledLink = styled.a`
   @media (max-width: 768px) {
     font-size: 1rem;
     line-height: 1.2em;}
+    padding: 1rem 1rem 1rem 1rem;
   &:hover {
     color: #ffffff;
     background: #F26849 ;
@@ -84,7 +85,7 @@ const StyledLink = styled.a`
 
 function Intro() {
   if (typeof window === "undefined") return null;
-  const width = (window.innerWidth < 600 ? 199 : 260)
+  const width = (window.innerWidth < 600 ? 180 : 260)
   return (
     <>
       <StyledBackgroundContainer>
