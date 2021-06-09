@@ -33,6 +33,7 @@ const StyledContainer = styled(motion.div)`
     margin: 0;
     position: absolute;
     top: 45%;
+    overflow: hidden;
   }
 `;
 
@@ -80,8 +81,10 @@ const StyledLink = styled.a`
 
 
 
+
 function Intro() {
   if (typeof window === "undefined") return null;
+  const width = (window.innerWidth < 600 ? 199 : 260)
   return (
     <>
       <StyledBackgroundContainer>
@@ -94,7 +97,7 @@ function Intro() {
       </StyledBackgroundContainer>
       <StyledContainerMain>
         <StyledContainer>
-          <Linebreaker width={260}>
+          <Linebreaker width={width}>
             <WindupChildren>
               <div>
                 {" "}
