@@ -13,7 +13,7 @@ const StyledCard = styled(motion.div)`
 `;
 
 const CardHeader = styled.header`
-  margin: 0rem 1rem 0rem 0rem;
+  margin: 1rem 1rem 0rem 0rem;
   padding: 1rem 2rem 0rem 2rem;
   color: white;
   font-size: 2rem;
@@ -31,6 +31,11 @@ const CardSubHeader = styled.header`
 const ImageWrapper = styled.div`
   height: 240px;
   width: 100%;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+  }
 `;
 
 const CardBody = styled.div`
@@ -53,6 +58,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
+
 
 const Card = (props) => {
   return (

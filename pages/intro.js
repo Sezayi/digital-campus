@@ -43,7 +43,7 @@ const StyledText = styled.h3`
   text-shadow: 1px 1px #000000;
   @media (max-width: 768px) {
     font-size: 1.2rem;
-    line-height: 2em;
+    line-height: 1.4em;
   }
 `;
 
@@ -67,6 +67,9 @@ const StyledLink = styled.a`
   text-shadow: none;
   padding: 1rem 2rem 1rem 2rem;
   border: 1px solid white;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.2em;}
   &:hover {
     color: #ffffff;
     background: #F26849 ;

@@ -20,6 +20,11 @@ const LogoContainer = styled.div`
   left: 64px;
   top: 64px;
   z-index: 1000;
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+  }
 `;
 
 const StyledTitle = styled.h1`
@@ -36,7 +41,7 @@ const StyledSub = styled.h2`
   font-size: 3rem;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 `;
 

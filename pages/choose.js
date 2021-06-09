@@ -12,6 +12,9 @@ import Image from "next/image";
 const StyledContainerWrapper = styled.div`
   height: 100vh;
   background-image: linear-gradient(to bottom right, #1B747B 0%, #123D5C  60%, #123D5C  100%);
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const StyledContainer = styled(motion.div)`
@@ -20,7 +23,7 @@ const StyledContainer = styled(motion.div)`
   flex-direction: column;
   justify-content: flex-start;
   @media (max-width: 768px) {
-    height: 200px;
+    height: 120px;
   }
 `;
 
