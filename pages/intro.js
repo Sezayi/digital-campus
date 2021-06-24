@@ -14,13 +14,12 @@ const StyledBackgroundContainer = styled.div`
 
 const StyledContainerMain = styled(motion.div)`
   margin: auto;
-  width: 50%;
-  padding: 10px;
-  height: 600px;
+  width: 70%;
+  padding: 8px;
   @media (max-width: 768px) {
     margin: auto;
     width: 100vw;
-    padding: 8px;
+    padding: 16px;
   }
 `;
 
@@ -28,14 +27,14 @@ const StyledContainer = styled(motion.div)`
   margin: 0;
   position: absolute;
   top: 45%;
-  width: 960px;
+  width: 1000px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   @media (max-width: 768px) {
     margin: 0;
     position: absolute;
     top: 45%;
-    overflow: hidden;
+    width: 360px;
   }
 `;
 
@@ -47,6 +46,7 @@ const StyledText = styled.h3`
   @media (max-width: 768px) {
     font-size: 1.2rem;
     line-height: 1.4em;
+    word-wrap: break-word;
   }
 `;
 
@@ -97,7 +97,7 @@ function Intro() {
       </StyledBackgroundContainer>
       <StyledContainerMain>
         <StyledContainer>
-        
+         
             <WindupChildren>
               <div>
                 {" "}
@@ -105,7 +105,7 @@ function Intro() {
                 <StyledText>
                   <Pace ms={50}>
                     {
-                      "It's time to rethink the spaces we live, work and thrive in. From changing business landscapes to climate challenges. We are all operating in uncertain environments"
+                      "It's time to rethink the spaces we live, work and thrive in. From changing business landscapes to climate challenges. We are all operating in uncertain environments."
                     }
                   </Pace>
                   <Pause ms={1000} />
@@ -119,7 +119,7 @@ function Intro() {
                 </StyledText>
               </div>
             </WindupChildren>
-     
+          
         </StyledContainer>
       </StyledContainerMain>
       <Link href="/choose">
