@@ -97,6 +97,7 @@ const Card = (props) => {
           objectFit="cover"
           width="400"
           height="240"
+          placeholder="blur"
         />
       </ImageWrapper>
       <ContentWrapper>
