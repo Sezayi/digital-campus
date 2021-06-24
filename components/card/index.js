@@ -98,6 +98,7 @@ const Card = (props) => {
           width="400"
           height="240"
           placeholder="blur"
+          quality="50"
         />
       </ImageWrapper>
       <ContentWrapper>
