@@ -27,6 +27,7 @@ const StyledContainer = styled(motion.div)`
   margin: 0;
   position: absolute;
   top: 45%;
+  width: 960px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   @media (max-width: 768px) {
@@ -54,11 +55,7 @@ const ButtonWrapper = styled.div`
   right: 5%;
 `;
 
-
 function Intro() {
-  if (typeof window === "undefined") return null;
-  const width = (window.innerWidth < 600 ? 160 : 260)
-
   return (
     <>
       <StyledBackgroundContainer>
@@ -71,7 +68,7 @@ function Intro() {
       </StyledBackgroundContainer>
       <StyledContainerMain>
         <StyledContainer>
-          <Linebreaker width={width}>
+        
             <WindupChildren>
               <div>
                 {" "}
@@ -93,7 +90,7 @@ function Intro() {
                 </StyledText>
               </div>
             </WindupChildren>
-          </Linebreaker>
+     
         </StyledContainer>
       </StyledContainerMain>
       <Link href="/choose">
