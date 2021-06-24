@@ -54,27 +54,6 @@ const ButtonWrapper = styled.div`
   right: 5%;
 `;
 
-const StyledLinkWrapper = styled.div`
-  margin-top: 2em;
-`;
-
-
-const StyledLink = styled.a`
-  color: #ffffff;
-  font-size: 2rem;
-  line-height: 2.4em;
-  text-decoration: none;
-  text-shadow: none;
-  padding: 1rem 1rem 1rem 1rem;
-  border: 1px solid white;
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    line-height: 1.2em;
-   
-  }
-
-`;
-
 
 function Intro() {
   if (typeof window === "undefined") return null;
