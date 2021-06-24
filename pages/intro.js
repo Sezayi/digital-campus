@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { WindupChildren, Pace, Pause } from "windups";
 import ButtonSecondary from "../components/buttonSecondary";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const StyledBackgroundContainer = styled.div`
   height: 100vh;
