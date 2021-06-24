@@ -59,38 +59,32 @@ const StyledLinkWrapper = styled.div`
 `;
 
 
-
 const StyledLink = styled.a`
   color: #ffffff;
   font-size: 2rem;
-  line-height: 1em;
+  line-height: 2.4em;
   text-decoration: none;
   text-shadow: none;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 1rem 1rem 1rem;
   border: 1px solid white;
   @media (max-width: 768px) {
     font-size: 1rem;
-    line-height: 1.2em;}
-    padding: 1rem 1rem 1rem 1rem;
-  &:hover {
-    color: #ffffff;
-    background: #F26849 ;
-    transition: all 0.4s ease 0s;
-    padding: 1rem 2rem 1rem 2rem;
-    border: 1px solid #F26849;
+    line-height: 1.2em;
+   
+  }
+
 `;
-
-
 
 
 function Intro() {
   if (typeof window === "undefined") return null;
-  const width = (window.innerWidth < 600 ? 185 : 260)
+  const width = (window.innerWidth < 600 ? 160 : 260)
+
   return (
     <>
       <StyledBackgroundContainer>
         <Image
-          src="/images/wereld.jpg"
+          src="/images/RHDHV-background.png"
           alt="city background"
           layout="fill"
           objectFit="cover"
@@ -118,18 +112,6 @@ function Intro() {
                     }
                   </Pace>
                 </StyledText>
-                <StyledText>
-                  <Pace ms={80}>
-                    <Pause ms={1500} />
-                    <StyledLinkWrapper>
-                      <StyledLink
-                        href="/choose"
-                      >
-                        {"Visit Summer University Campus"}
-                      </StyledLink>
-                      </StyledLinkWrapper>
-                  </Pace>
-                </StyledText>
               </div>
             </WindupChildren>
           </Linebreaker>
@@ -137,7 +119,7 @@ function Intro() {
       </StyledContainerMain>
       <Link href="/choose">
         <ButtonWrapper>
-          <ButtonSecondary title="Skip" />
+          <ButtonSecondary title="Visit Summer University Campus" />
         </ButtonWrapper>
       </Link>
     </>

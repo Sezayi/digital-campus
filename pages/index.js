@@ -2,6 +2,8 @@ import Head from "next/head";
 import Button from "../components/button";
 import styled from "styled-components";
 import Logo from "../components/logo";
+import Hero from "../components/hero";
+import HeroSmall from "../components/heroSmall";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -71,9 +73,12 @@ const TitleWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 `;
 
 export default function Home() {
+  if (typeof window === "undefined") return null;
+  const width = window.innerWidth
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
   useEffect(() => {
@@ -98,7 +103,7 @@ export default function Home() {
     <>
       <StyledBackgroundContainer>
         <Image
-          src="/images/wereld.jpg"
+          src="/images/RHDHV-background.png"
           alt="city background"
           layout="fill"
           objectFit="cover"
@@ -113,10 +118,8 @@ export default function Home() {
             <title>Royal Haskoning University Campus</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
-
           <TitleWrapper>
-            <StyledSub>Welcome to</StyledSub>
-            <StyledTitle>Summer University Campus</StyledTitle>
+            {width < 600 ? <HeroSmall/> : <Hero/>}
           </TitleWrapper>
           <Link href="/intro">
             <StartWrapper>

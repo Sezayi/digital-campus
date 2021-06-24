@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const StyledContainerWrapper = styled.div`
   height: 100vh;
-  background-image: linear-gradient(to bottom right, #1B747B 0%, #123D5C  60%, #123D5C  100%);
+  background-color: #000;
   @media (max-width: 768px) {
     height: 100%;
   }
@@ -78,9 +78,9 @@ function Choose() {
         <Link href="/">
           <StyledA >
             <Card
-              header="VUCA tower"
+              header="Signapore"
               subheader="Singapore"
-              image={"/images/vuca.jpeg"}
+              image={"/images/RHDHV_Singapore_1.jpeg"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
@@ -88,9 +88,9 @@ function Choose() {
         <Link href="/">
           <StyledA >
             <Card
-              header="Zero Carbon harbor"
-              subheader="Cape Town"
-              image={"/images/zeroharbor.jpeg"}
+              header="Rotterdam"
+              subheader="Netherlands"
+              image={"/images/RHDHV_Rotterdam.jpeg"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
@@ -98,9 +98,9 @@ function Choose() {
         <Link href="/">
           <StyledA >
             <Card
-              header="A-Island"
-              subheader="Birmingham"
-              image={"/images/aisland.jpeg"}
+              header="Rotterdam"
+              subheader="Netherlands"
+              image={"/images/RHDHV_Rotterdam_2.jpeg"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >
@@ -108,9 +108,79 @@ function Choose() {
         <Link href="/">
           <StyledA >
             <Card
-              header="ML highway"
-              subheader="Amersfoort"
-              image={"/images/mlhighway.jpeg"}
+              header="Paris"
+              subheader="France"
+              image={"/images/RHDHV_Paris.jpeg"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="Nijmegen"
+              subheader="Netherlands"
+              image={"/images/RHDHV_Nijmegen.jpeg"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="London"
+              subheader="England"
+              image={"/images/RHDHV_London.jpeg"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="Amersfoort"
+              subheader="Headquarters"
+              image={"/images/RHDHV_HQ_Amersfoort.jpeg"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="Houston"
+              subheader="United States"
+              image={"/images/RHDHV_Houston_2.jpeg"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="Henley in Arden"
+              subheader="England"
+              image={"/images/RHDHV_Henley-on-Thames at sunset.png"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="Brighton"
+              subheader="England"
+              image={"/images/RHDHV_Brighton.png"}
+              body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
+            />
+          </StyledA >
+        </Link>
+        <Link href="/">
+          <StyledA >
+            <Card
+              header="Amsterdam"
+              subheader="Netherlands"
+              image={"/images/RHDHV_Amsterdam.jpeg"}
               body="An observer is one who engages in observation, follows events closely and comments publicly on them. An observer is one who engages in observation, follows events closely and comments publicly on them."
             />
           </StyledA >

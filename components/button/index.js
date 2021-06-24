@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const StyledButton = styled(motion.a)`
   font-family: Oswald, sans-serif;
   display: inline-block;
-  padding: 1rem 2.4rem 1rem 2.4rem;
+  padding: 1rem 2.2rem 1rem 2.2rem;
   letter-spacing: 0.1em;
   margin: 0.5rem 1rem;
   color: #ffffff;
@@ -25,7 +25,7 @@ const Button = (props) => {
   return (
     <StyledButton
       whileHover={{
-        scale: 1.1,
+        scale: 1.2,
         cursor: "pointer",
       }}
       href={props.href}
