@@ -145,7 +145,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <TitleWrapper>
-            { size.width < 600 ? <HeroSmall/> : <Hero/>}
+            { size.width < 768 ? <HeroSmall/> : <Hero/>}
           </TitleWrapper>
           <Link href="/intro">
             <StartWrapper>
