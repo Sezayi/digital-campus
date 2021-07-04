@@ -188,7 +188,7 @@ function Choose() {
 
           <Link href="/intro">
             <StartWrapper>
-              <Button title="VISIT THE SUMMER UNIVERSITY CAMPUS" />
+              <Button title="Visit The Summer University Campus" />
             </StartWrapper>
           </Link>
         </CharacterContainer>
