@@ -8,7 +8,7 @@ import Button from "../components/button";
 const StyledBackgroundContainer = styled.div`
   height: 100vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   @media (max-width: 768px) {
     height: 100%
     width: 100%;
@@ -59,7 +59,9 @@ const StyledA = styled.a`
 const StartWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 2rem;
+  padding-bottom: 2rem;
   z-index: 9999;
 `;
 
@@ -186,13 +188,15 @@ function Choose() {
             </StyledA>
           </Link>
 
-          <Link href="/intro">
-            <StartWrapper>
-              <Button title="Visit The Summer University Campus" />
-            </StartWrapper>
-          </Link>
         </CharacterContainer>
+        <StartWrapper>
+            <Link href="/intro">
+              <Button title="Visit The Summer University Campus" />
+              </Link>
+            </StartWrapper>
+          
       </StyledContainerWrapper>
+      
     </>
   );
 }

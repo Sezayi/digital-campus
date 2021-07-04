@@ -13,6 +13,7 @@ const StyledButton = styled(motion.a)`
   letter-spacing: 0.5px;
   text-decoration: none;
   background-color: #F26849;
+  z-index: 9999;
 `;
 
 // background-image: linear-gradient(to bottom right, #519E8E 0%, #123D5C  60%, #123D5C  100%);
