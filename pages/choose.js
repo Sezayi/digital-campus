@@ -160,7 +160,7 @@ function Choose() {
               />
             </StyledA>
           </Link>
-          <Link href="https://miro.com/app/board/o9J_l809jbQ=/">
+          <Link href="https://miro.com/app/board/o9J_l809jbQ=/" passHref={true}>
             <StyledA>
               <Card
                 header="Houston"
@@ -178,7 +178,7 @@ function Choose() {
               />
             </StyledA>
           </Link>
-          <Link href="/" passHref={true}>
+          <Link href="https://miro.com/app/board/o9J_l80GRYU=/" passHref={true}>
             <StyledA>
               <Card
                 header="Birmingham"
