@@ -9,6 +9,11 @@ const StyledBackgroundContainer = styled.div`
   height: 100vh;
   width: 100%;
   position: absolute;
+  @media (max-width: 768px) {
+    height: 100%
+    width: 100%;
+    position: fixed;
+  }
 `;
 
 const StyledContainerWrapper = styled.div`
