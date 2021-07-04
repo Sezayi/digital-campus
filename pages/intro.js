@@ -51,9 +51,7 @@ const StyledText = styled.h3`
 `;
 
 const ButtonWrapper = styled.div`
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
+  margin-top: 2rem;
 `;
 
 // Hook
@@ -89,7 +87,7 @@ function Intro() {
     <>
       <StyledBackgroundContainer>
         <Image
-          src="/images/RHDHV-background.png"
+          src="/images/RHDHV-wereld-bg.png"
           alt="city background"
           layout="fill"
           objectFit="cover"
@@ -119,14 +117,15 @@ function Intro() {
                 </StyledText>
               </div>
             </WindupChildren>
-          
-        </StyledContainer>
-      </StyledContainerMain>
-      <Link href="/choose">
+            <Link href="/choose">
         <ButtonWrapper>
           <ButtonSecondary title="Visit Summer University Campus" />
         </ButtonWrapper>
       </Link>
+        </StyledContainer>
+       
+      </StyledContainerMain>
+    
     </>
   );
 }

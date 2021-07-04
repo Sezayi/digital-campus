@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "TheSans";
+  font-family: "TheSans", Verdana, sans-serif;
   src: url("/fonts/TheSans-Plain.otf");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: "TheSans";
+  font-family: "TheSans", Verdana, sans-serif;
   src: url("/fonts/TheSans-B6SemiBold.otf");
   font-style: bold;
   font-weight: 600;
@@ -18,39 +18,39 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'TheSans', sans-serif;
-  font-weight: 400;
+  font-family: 'TheSans', Verdana, sans-serif;
+  font-weight: 600;
   background: #000000;  /* fallback for old browsers */
   }
 
 h1 {
-  font-family: TheSans, sans-serif;
+  font-family: 'TheSans', Verdana, sans-serif;
   font-size: 5em;
-  font-weight: 600;
+  font-weight: 500;
   color:#FFFFFF;
   text-align: center;
 }
 
 h2 {
-  font-family: TheSans, sans-serif;
+  font-family: 'TheSans', Verdana, sans-serif;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 500;
   color:#FFFFFF;
   margin-top: 2rem
 }
 
 h3 {
-  font-family: TheSans, sans-serif;
+  font-family: 'TheSans', Verdana, sans-serif;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 500;
   color:#ffffff;
   margin: 1rem;
 }
 
 h4 {
-  font-family: TheSans, sans-serif;
+  font-family: 'TheSans', Verdana, sans-serif;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 500;
   color:#ffffff;
   margin: 1rem;
 }

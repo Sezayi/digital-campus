@@ -3,51 +3,44 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const StyledCard = styled(motion.div)`
-  overflow: hidden;
   padding: 0 0 32px;
   margin: 1rem;
-  max-width: 400px;
-  height: 640px;
-  background-image: linear-gradient(to bottom right, #1B747B 0%, #123D5C  60%, #123D5C  100%);
-  border-radius: 4px;
-  -moz-box-shadow: 4px 6px 0px 6px #123D5C;
-  -webkit-box-shadow: 4px 6px 0px 6px #123D5C;
-  box-shadow: 4px 6px 0px 4px #013153;
+  max-width: 320px;
+  height: 240px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(18, 61, 92) 0%,
+    rgb(18, 61, 92) 60%,
+    rgb(27, 116, 123) 100%
+  );
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+`;
+
+
+const ImageWrapper = styled.div`
+  height: 120px;
+  width: 100%;
+  mix-blend-mode: lighten;
+  opacity: 0.9;
 `;
 
 const CardHeader = styled.header`
-  margin: 1rem 1rem 0rem 0rem;
-  padding: 1rem 2rem 0rem 2rem;
+  position: absolute;
+  margin: -7rem 1rem 0rem 0rem;
+  padding: 0.5rem 1rem 0rem 1rem;
   color: white;
-  font-size: 2rem;
-  font-family: TheSans, sans-serif;
-  @media (max-width: 768px) {
-    margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 2rem 0rem 2rem;
-  }
-`;
-
-const CardSubHeader = styled.header`
-  margin: 0rem 1rem 0rem 0rem;
-  padding: 0rem 2rem 2rem 2rem;
-  color: #f26849;
   font-size: 1.5rem;
   font-family: TheSans, sans-serif;
 `;
 
-const ImageWrapper = styled.div`
-  height: 240px;
-  width: 100%;
-  transition: all .2s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-    transition: all .2s ease-in-out;
-  }
-`;
-
-const CardBody = styled.div`
-  padding: 0px 32px 32px 32px;
-  color: white;
+const CardSubHeader = styled.header`
+  position: absolute;
+  margin: -4.5rem 0rem 0rem 0rem;
+  padding: 0rem 1rem 0rem 1rem;
+  color: #f26849;
+  font-size: 1rem;
+  font-family: TheSans, sans-serif;
 `;
 
 const StyledLink = styled.a`
@@ -55,30 +48,29 @@ const StyledLink = styled.a`
   display: inline-block;
   padding: 1rem 2.4rem 1rem 2.4rem;
   letter-spacing: 0.1em;
-  margin: 0.5rem 1rem;
-  color: #F26849;
+  margin: 3.4rem 1rem;
+  color: #f26849;
   text-align: center;
   font-size: 1rem;
   letter-spacing: 0.5px;
   text-decoration: none;
-  background-color: #FFFFFF;
-  border-radius: 0.25rem;
+  background-color: #ffffff;
   &:hover {
-    color: #FFFFFF;
-    background-color: #F26849;
-    transition: all .2s ease-in-out;
+    color: #ffffff;
+    background-color: #f26849;
+    transition: all 0.2s ease-in-out;
   }
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  
 `;
-
 
 const Card = (props) => {
   return (
+    
     <StyledCard
       whileHover={{
         position: "relative",
@@ -97,17 +89,17 @@ const Card = (props) => {
           quality="50"
           alt="city"
           objectFit="cover"
-          width="400"
-          height="240"
+          width="320"
+          height="160"
         />
       </ImageWrapper>
+      <CardHeader>{props.header}</CardHeader>
+      <CardSubHeader>{props.subheader}</CardSubHeader>
       <ContentWrapper>
-        <CardHeader>{props.header}</CardHeader>
-        <CardSubHeader>{props.subheader}</CardSubHeader>
-        <CardBody>{props.body}</CardBody>
-        <StyledLink>VISIT THIS PLACE</StyledLink>
+        <StyledLink>LET'S SPRINT</StyledLink>
       </ContentWrapper>
     </StyledCard>
+  
   );
 };
 

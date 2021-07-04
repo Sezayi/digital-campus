@@ -29,23 +29,23 @@ const LogoContainer = styled.div`
   }
 `;
 
-const StyledTitle = styled.h1`
-  color: #ffffff;
-  font-size: 6rem;
-  margin: 0rem 0rem 3rem 0rem;
-  @media (max-width: 768px) {
-    font-size: 3rem;
-  }
-`;
+// const StyledTitle = styled.h1`
+//   color: #ffffff;
+//   font-size: 6rem;
+//   margin: 0rem 0rem 3rem 0rem;
+//   @media (max-width: 768px) {
+//     font-size: 3rem;
+//   }
+// `;
 
-const StyledSub = styled.h2`
-  color: #ffffff;
-  font-size: 3rem;
+// const StyledSub = styled.h2`
+//   color: #ffffff;
+//   font-size: 3rem;
 
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
+//   @media (max-width: 768px) {
+//     font-size: 2rem;
+//   }
+// `;
 
 const StyledMainContainter = styled.div`
   margin-bottom: 4em;
@@ -115,7 +115,7 @@ export default function Home() {
           THREE,
           color: 0x2aa18d,
           backgroundColor: 0x222222,
-          backgroundAlpha: 0.4,
+          backgroundAlpha: 0.1,
           maxDistance: 28.0,
           spacing: 20.0,
         })
@@ -129,7 +129,7 @@ export default function Home() {
     <>
       <StyledBackgroundContainer>
         <Image
-          src="/images/RHDHV-background.png"
+          src="/images/RHDHV-wereld-bg.png"
           alt="city background"
           layout="fill"
           objectFit="cover"
