@@ -8,21 +8,34 @@ const StyledCard = styled(motion.div)`
   max-width: 320px;
   height: 240px;
   background-image: linear-gradient(
-    to right bottom,
+    173deg,
     rgb(18, 61, 92) 0%,
-    rgb(18, 61, 92) 60%,
+    rgb(18, 61, 92) 70%,
     rgb(27, 116, 123) 100%
   );
   -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
 `;
 
-
 const ImageWrapper = styled.div`
   height: 120px;
   width: 100%;
-  mix-blend-mode: lighten;
-  opacity: 0.9;
+`;
+
+const StyledImage = styled(Image)`
+`;
+
+const GradientOverlay = styled.div`
+position: absolute;
+  width: 320px;
+  margin: -1.3rem 1rem 0rem 0rem;
+  background: rgb(18, 61, 92);
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 61, 92, 0) 0%,
+    rgba(18, 61, 92, 0.7) 40%,
+    rgba(18,61,92,1) 100%
+  );
 `;
 
 const CardHeader = styled.header`
@@ -65,12 +78,10 @@ const StyledLink = styled.a`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  
 `;
 
 const Card = (props) => {
   return (
-    
     <StyledCard
       whileHover={{
         position: "relative",
@@ -83,7 +94,7 @@ const Card = (props) => {
       }}
     >
       <ImageWrapper>
-        <Image
+        <StyledImage
           src={props.image}
           placeholder="blur"
           quality="50"
@@ -92,14 +103,15 @@ const Card = (props) => {
           width="320"
           height="160"
         />
+         <GradientOverlay>&nbsp;</GradientOverlay>
       </ImageWrapper>
       <CardHeader>{props.header}</CardHeader>
       <CardSubHeader>{props.subheader}</CardSubHeader>
+
       <ContentWrapper>
         <StyledLink>LET'S SPRINT</StyledLink>
       </ContentWrapper>
     </StyledCard>
-  
   );
 };
 

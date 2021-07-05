@@ -138,7 +138,7 @@ function Choose() {
               <Card
                 header="Amersfoort"
                 subheader="Headquarters"
-                image={"/images/RHDHV_HQ_Amersfoort.jpeg"}
+                image={"/images/RHDHV_HQ_Amersfoort_Gradient_Top_Left_Corner.jpg"}
               />
             </StyledA>
           </Link>
@@ -183,14 +183,14 @@ function Choose() {
               <Card
                 header="Birmingham"
                 subheader="England"
-                image={"/images/RHDHV_London.jpeg"}
+                image={"/images/RHDHV_Birmingham_Gradient_Top_Left_Corner.jpg"}
               />
             </StyledA>
           </Link>
 
         </CharacterContainer>
         <StartWrapper>
-            <Link href="/intro">
+            <Link href="https://miro.com/app/board/o9J_lFfb0ik=/" passHref={true}>
               <Button title="Visit The Summer University Campus" />
               </Link>
             </StartWrapper>
