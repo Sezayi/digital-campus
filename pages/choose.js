@@ -100,7 +100,7 @@ function Choose() {
           <Link href="https://miro.com/app/board/o9J_l802jG8=/" passHref={true}>
             <StyledA>
               <Card
-                header="Henley in Arden"
+                header="Henley-in-Arden"
                 subheader="England"
                 image={"/images/RHDHV_Henley-on-Thames at sunset.png"}
               />
